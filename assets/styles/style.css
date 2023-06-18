@@ -1,0 +1,32 @@
+@import url("normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+
+:root {
+  /* color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424; */
+
+  --white: #fff;
+  --orange: #f3603c;
+  --dark-blue: #242d52;
+  --darker-blue: #1d1e25;
+  --light-orange: #fff0ec;
+  --light-gray: #fafafa;
+  --gray: #979797;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  /* background-color: red; */
+}
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+} */
