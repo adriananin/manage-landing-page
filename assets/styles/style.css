@@ -86,17 +86,58 @@ body {
   background-color: var(--light-orange);
 }
 
+/* font styling*/
+
+.cta-text {
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 2.75rem;
+  letter-spacing: -0.04463rem;
+}
+
 /* Section Styling */
 
 .hero,
+.cta,
 .features {
   padding: 5rem;
 }
 
 .carousel,
-.cta,
 .footer {
   padding: 3rem;
+}
+
+.cta {
+  background-color: var(--orange);
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+}
+
+@media (min-width: 50em) {
+  .cta {
+    text-align: left;
+  }
+
+  .btn-wrapper {
+    margin-left: auto;
+  }
+}
+
+/* Background images */
+
+.cta::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url("/assets/images/bg-tablet-pattern.svg"),
+    url("/assets/images/bg-tablet-pattern.svg");
+  background-position: -15rem -5rem, 76rem -42rem;
+  background-repeat: no-repeat;
+  opacity: 0.1;
 }
 
 /* Navigation Styling */
