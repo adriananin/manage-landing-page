@@ -1,7 +1,3 @@
-// import "./style.css";
-// import javascriptLogo from './javascript.svg'
-// import viteLogo from '/vite.svg'
-
 const header = document.querySelector(".header");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const primaryNav = document.querySelector(".primary-navigation");
@@ -13,4 +9,11 @@ navToggle.addEventListener("click", () => {
   primaryNav.toggleAttribute("data-visible");
 
   header.toggleAttribute("data-overlay");
+});
+
+const slider = new A11YSlider(document.querySelector(".slider"), {
+  adaptiveHeight: false,
+  dots: true,
+  centerMode: true,
+  arrows: false,
 });
