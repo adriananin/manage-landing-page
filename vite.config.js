@@ -4,5 +4,5 @@ export default defineConfig({
   build: {
     outDir: "dist", // Output directory for the built files
   },
-  base: "/",
+  base: "/manage-landing-page/",
 });
