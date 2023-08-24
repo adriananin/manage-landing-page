@@ -39,6 +39,7 @@ body {
   font-size: 1rem;
   font-family: "Be Vietnam Pro";
   color: var(--dark-blue);
+  overflow-x: hidden;
 }
 
 .visually-hidden {
@@ -51,6 +52,10 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.mx-auto {
+  margin-inline: auto;
 }
 
 /* Button */
@@ -116,6 +121,12 @@ body {
   }
 }
 
+@media (max-width: 50em) {
+  .hero {
+    text-align: center;
+  }
+}
+
 /* Background images */
 
 .cta::before {
@@ -164,9 +175,24 @@ body {
 }
 
 @media (max-width: 50em) {
+  .header[data-overlay] {
+    position: relative;
+    z-index: 999;
+  }
+
   .primary-navigation {
+    /* display: none;
+    position: absolute; */
     display: none;
-    position: absolute;
+    position: fixed;
+    padding: 3rem;
+    margin-inline: auto;
+    inset: 7rem 1rem auto;
+    max-width: 25rem;
+    margin-left: auto;
+    background: var(--white);
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
   }
 
   ul {
@@ -213,10 +239,16 @@ body {
     background: transparent;
     border: 0;
     padding: 0.5em;
+    width: 1.65rem;
+    aspect-ratio: 1;
+    background-image: url("/assets/images/icon-hamburger.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
-  .mobile-nav-toggle .icon-close {
-    display: none;
+  .mobile-nav-toggle[aria-expanded="true"] {
+    background-image: url("/assets/images/icon-close.svg");
   }
 
   .nav-wrapper .button {
@@ -396,6 +428,56 @@ body {
 
 .a11y-slider-dots li button.active {
   background: var(--orange);
+}
+
+/* Section bg image */
+
+@media (max-width: 50em) {
+  .hero-image {
+    order: -1;
+  }
+}
+
+.hero-image::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 0;
+  width: 87%;
+  max-height: 70vh;
+  aspect-ratio: 1/1.2;
+  background-image: url("/assets/images/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+@media (min-width: 50em) {
+  .hero-image::before {
+    width: 45%;
+  }
+}
+
+.features-blog::before {
+  content: url("/assets/images/bg-tablet-pattern.svg");
+  zoom: 30%;
+  position: absolute;
+  z-index: -1;
+  left: 70%;
+  bottom: -40%;
+  width: 100px;
+}
+
+@media (min-width: 50em) {
+  .features-blog::before {
+    content: url("/assets/images/bg-tablet-pattern.svg");
+    zoom: 70%;
+    position: absolute;
+    z-index: -1;
+    left: -500px;
+    top: 155%;
+    width: 100px;
+  }
 }
 
 /* Footer styling */
