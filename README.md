@@ -18,8 +18,8 @@
 
 ### Links
 
-- [Solution URL:](https://github.com/adriananin/manage-landing-page)
-- [Live Site URL:](https://adriananin.github.io/manage-landing-page/)
+- [Solution URL](https://github.com/adriananin/manage-landing-page)
+- [Live Site URL](https://adriananin.github.io/manage-landing-page/)
 
 ## My process
 
